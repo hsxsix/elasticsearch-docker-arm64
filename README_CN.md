@@ -1,6 +1,6 @@
-# ElasticSearch-Docker-RPi
+# ElasticSearch-Docker-arm64
 
-elasticsearch docker for raspberry pi (aarch64)
+elasticsearch arm64设备的docker镜像
 
 [English](https://github.com/hsxsix/elasticsearch-docker-rpi/blob/master/README.md) | [中文](https://github.com/hsxsix/elasticsearch-docker-rpi/blob/master/README_CN.md)
 
