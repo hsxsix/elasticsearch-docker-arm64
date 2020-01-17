@@ -34,4 +34,4 @@ docker run -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" hsxsix/rpi-
 
 * 基础镜像为什么不使用alpine，这样镜像体积不是更小吗？
 
-因为alpine运行jdk需要依赖glic、默认没有bash、而且useradd   chroot等命令和标准命令相差较大，会有很大的变动，未经过充分的测试验证。
+alpine运行jdk需要依赖glic、默认没有bash、而且useradd   chroot等命令和标准命令相差较大，会有很大的变动，未经过充分的测试验证。
