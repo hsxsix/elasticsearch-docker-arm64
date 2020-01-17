@@ -7,11 +7,11 @@ elasticsearch arm64设备的docker镜像
 ## 快速开始
 
 参考官方文档: [Install Elasticsearch with Dockeredit](https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html),
-仅需要把 "docker.elastic.co/elasticsearch/elasticsearch" 替换为 "hsxsix/rpi-elasticsearch"。
+仅需要把 "docker.elastic.co/elasticsearch/elasticsearch" 替换为 "hsxsix/elasticsearch-arm64"。
 
 举个栗子:
 
-使用docker命令在树莓派上启动一个单点，
+使用docker命令在树莓派上(64位内核的系统)启动一个单点，
 
 ```shell
 docker run -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" hsxsix/rpi-elasticsearch:7.5.1
