@@ -13,13 +13,14 @@
 
 FROM centos:7 AS builder
 
+ENV VERSION 7.5.1
 ENV PATH /usr/share/elasticsearch/bin:$PATH
 
 RUN groupadd -g 1000 elasticsearch &&     adduser -u 1000 -g 1000 -d /usr/share/elasticsearch elasticsearch
 
 WORKDIR /usr/share/elasticsearch
 
-RUN cd /opt && curl --retry 8 -s -L -O https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.5.1-linux-x86_64.tar.gz -# && cd -
+RUN cd /opt && curl --retry 8 -s -L -O https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-${VERSION}-linux-x86_64.tar.gz -# && cd -
 RUN cd /opt && curl --retry 8 -s -L -O https://github.com/AdoptOpenJDK/openjdk13-binaries/releases/download/jdk-13.0.1+9/OpenJDK13U-jdk_aarch64_linux_hotspot_13.0.1_9.tar.gz && cd -
 
 RUN tar zxf /opt/elasticsearch-7.5.1-linux-x86_64.tar.gz --strip-components=1
